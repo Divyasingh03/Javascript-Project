@@ -1,0 +1,33 @@
+const NFTs=[];
+
+function minNFT(name,age,university,address){
+    const NFT={
+        "Name": name,
+        "Age" : age,
+        "University" : university,
+        "Address" : address
+    }
+    NFTs.push(NFT);
+}
+minNFT("Priya","24","Chandigarh University","Punjab");
+minNFT("Mahi","20","Punjab University","Chandigarh");
+minNFT("Pranav","22","Amity University","Noida");
+minNFT("Piyush","21","Delhi University","Delhi");
+
+
+function listNFTs(){
+    for(let i=0;i<NFTs.length;i++){
+        console.log("\nID:"+(i+1));
+        console.log("Name:" +NFTs[i].Name);
+        console.log("Age:" +NFTs[i].Age);
+        console.log("University Name:" +NFTs[i].University);
+        console.log("Address:"+ NFTs[i].Address);
+    }
+}
+listNFTs();
+
+
+function getTotalSupply(){
+    console.log("\n"+NFTs.length);
+}
+getTotalSupply();
